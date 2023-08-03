@@ -6,6 +6,7 @@ import StaffDetails from './components/StaffDetails';
 import Heading from './components/Heading';
 import Navbar from './components/Navbar';
 import Logout from './components/Logout';
+import Barchart from './components/Barchart';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -53,7 +54,8 @@ function App() {
         <Route path="/dashboard" element={<Dashboard uniqueVisitor = {uniqueVisitor} totalVisitor = {totalVisitor} pageLoadTime = {pageLoadTime} conversionRate = {conversionRate}  avgOrderValue = {avgOrderValue} abaddonmentCount = {abaddonmentCount}
          lifeTimeOrderValue = {lifeTimeOrderValue} />} />
         <Route path="/staffdetails" element={<StaffDetails />} />
-        <Route path="/logout" element={<Logout />} />
+        <Route path="/logout" element={<Logout />} /> 
+        <Route path="/Barchart" element={<Barchart />} /> 
       </Routes>
     </div>
   );

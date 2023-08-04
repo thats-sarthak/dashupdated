@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
 import { useEffect, useState } from 'react';
 import Dashboard from './components/Dashboard';
@@ -7,6 +7,7 @@ import Heading from './components/Heading';
 import Navbar from './components/Navbar';
 import Logout from './components/Logout';
 import Barchart from './components/Barchart';
+import DateRange from './components/DateRange';
 import { Route, Routes } from 'react-router-dom';
 
 
@@ -50,12 +51,27 @@ function App() {
       <Heading />
       <Navbar />
 
+      {/* <DateRange /> */}
+
       <Routes>
-        <Route path="/dashboard" element={<Dashboard uniqueVisitor = {uniqueVisitor} totalVisitor = {totalVisitor} pageLoadTime = {pageLoadTime} conversionRate = {conversionRate}  avgOrderValue = {avgOrderValue} abaddonmentCount = {abaddonmentCount}
-         lifeTimeOrderValue = {lifeTimeOrderValue} />} />
+        {/* <Route path="/dashboard" element={<Dashboard uniqueVisitor = {uniqueVisitor} totalVisitor = {totalVisitor} pageLoadTime = {pageLoadTime} conversionRate = {conversionRate}  avgOrderValue = {avgOrderValue} abaddonmentCount = {abaddonmentCount}
+         lifeTimeOrderValue = {lifeTimeOrderValue} />} /> */}
+
+
+         <Route exact path="/dashboard" element={
+
+          <React.Fragment>
+             <DateRange />
+            <Dashboard uniqueVisitor = {uniqueVisitor} totalVisitor = {totalVisitor} pageLoadTime = {pageLoadTime} conversionRate = {conversionRate}  avgOrderValue = {avgOrderValue} abaddonmentCount = {abaddonmentCount}
+              lifeTimeOrderValue = {lifeTimeOrderValue} />
+              <Barchart/>
+          </React.Fragment>
+
+         } />
+
         <Route path="/staffdetails" element={<StaffDetails />} />
         <Route path="/logout" element={<Logout />} /> 
-        <Route path="/Barchart" element={<Barchart />} /> 
+        {/* <Route path="/Barchart" element={<Barchart />} />  */}
       </Routes>
     </div>
   );

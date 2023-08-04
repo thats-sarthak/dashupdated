@@ -21,7 +21,7 @@ const Barchart = () => {
   return (
     <div>
 
-    <Chart options={options} series={series} type="bar" width={800} height={500} />
+    <Chart options={options} series={series} type="bar" width={500} height={400} />
     </div>
   )
 }

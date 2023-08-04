@@ -10,7 +10,7 @@ const Logout = () => {
 
   return (
     <div>
-      <h1>Thanks For The Visit, Have A Great Day</h1>
+      <h1>Thanks For The Visit, Have A Pretty Day</h1>
       <br />
       <br />
       <button onClick={handleNavigateToDashboard} style={{padding:10, color:'orange', fontSize:'2rem'}}>Go to Dashboard</button>

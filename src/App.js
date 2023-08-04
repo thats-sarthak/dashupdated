@@ -34,9 +34,6 @@ function App() {
         setAbandonmentCount(data?.response[5]?.cartAbandonmentCount?.value);
         setLifeTimeOrderValue(data?.response[6]?.lifetimeOrderValue?.value);
 
-  
-
-        console.log("value", uniqueVisitor )
          
       } catch (error) {
         console.log(error);
@@ -64,7 +61,7 @@ function App() {
              <DateRange />
             <Dashboard uniqueVisitor = {uniqueVisitor} totalVisitor = {totalVisitor} pageLoadTime = {pageLoadTime} conversionRate = {conversionRate}  avgOrderValue = {avgOrderValue} abaddonmentCount = {abaddonmentCount}
               lifeTimeOrderValue = {lifeTimeOrderValue} />
-              <Barchart/>
+              <Barchart />
           </React.Fragment>
 
          } />
